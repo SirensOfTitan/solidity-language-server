@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { isNotificationMessage } from "vscode-jsonrpc/lib/messages";
 import {
     StreamMessageReader,
@@ -16,10 +18,9 @@ import { FileLogger, StderrLogger } from "./logging";
 import { SolidityService, SolidityServiceOptions } from "./solidityService";
 
 const program = require("commander");
-const packageJson = require("../package.json");
 
 program
-    .version(packageJson.version)
+    .version('0.0.1')
     .option("-l, --logfile [file]", "log to this file")
     .parse(process.argv);
 

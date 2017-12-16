@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { FileLogger, StdioLogger } from "./logging";
 import { ServeOptions, serve } from "./server";
 import { SolidityService, SolidityServiceOptions } from "./solidityService";

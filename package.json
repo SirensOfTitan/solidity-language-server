@@ -136,11 +136,8 @@
   },
   "author": "Kwang Yul Seo <kseo@kodebox.io>",
   "scripts": {
-    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    "watch": "tsc -watch -p ./"
   },
   "jest": {
     "transform": {
@@ -177,6 +174,10 @@
     "tslint": "^5.7.0",
     "typescript": "^2.5.2"
   },
+  "bin": {
+    "solidity-langserver": "./out/src/server/languageServer.js",
+    "solidity-langserver-stdio": "./out/src/server/languageServerStdio.js"
+  },
   "importSort": {
     ".js, .jsx, .es6, .es": {
       "parser": "babylon",
@@ -203,8 +204,6 @@
     "solhint": "^1.1.8",
     "solium": "^1.0.3",
     "solparse": "^1.2.7",
-    "vscode": "^1.1.5",
-    "vscode-languageclient": "^3.4.3",
     "vscode-languageserver": "^3.4.2",
     "vscode-languageserver-types": "^3.4.0"
   }
